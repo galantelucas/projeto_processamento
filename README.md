@@ -75,7 +75,7 @@ except Exception as err:
 
 * ### 5.2 Abertura do arquivo, tratando colunas e pivotando os dados
  
-![alt text](tests\Imagens\image-3.png)
+![alt text](./Imagens/image-3.png)
 ```Python
 # Realizando abertura do arquivo excel, pivotando as variaveis para colunas, alterando o tipo de dado e salvando em XLSX
 path_excel = fr'C:\Users\user\Desktop\projeto_processamento\tests\data\dados.xlsx'
@@ -114,11 +114,11 @@ print(f"Arquivo Excel com valores pivotados salvos em: '{path_pivot_excel}' com 
 
 * ### 5.3 Analisando o dataframe pivotado
 pivot_df.sample(3)
-![alt text](tests\Imagens\image.png)
+![alt text](./Imagens/image.png)
 pivot_df.info(3)
-![alt text](tests\Imagens\image-1.png)
+![alt text](./Imagens/image-1.png)
 pivot_df.describe()
-![alt text](tests\Imagens\image-2.png)
+![alt text](./Imagens/image-2.png)
 
 ## 6. Gerando gráficos para análises - Variação Mensal
 Plotar um gráfico de barras do Estado e a variável de variação mês/mês da Indústria Geral para identificar qual estado apresentou crescimento com relação ao mês anterior (Fevereiro-2024)
@@ -149,7 +149,7 @@ plt.xticks(rotation=45)  # Rotaciona os rótulos do eixo x para melhorar a legib
 plt.tight_layout()  # Ajusta o layout para evitar sobreposição de elementos
 plt.show()
 ```
-![alt text](tests\Imagens\image-4.png)
+![alt text](./Imagens/image-4.png)
 
 Estado do Pará, seguido de Maranhão e Rio de Janeiro foram os estados com maior crescimento industrial com relação ao mês anterior.
 
@@ -184,7 +184,7 @@ plt.xticks(rotation=45)  # Rotaciona os rótulos do eixo x para melhorar a legib
 plt.tight_layout()  # Ajusta o layout para evitar sobreposição de elementos
 plt.show()
 ```
-![alt text](tests\Imagens\image-5.png)
+![alt text](./Imagens/image-5.png)
 
 Cnae 3.19 - Fabricação de coque, de produtos derivados do petróleo e de biocombustíveis teve maior expressão de crescimento acumulado com relação aos ultimos 12 meses.
 
@@ -228,6 +228,6 @@ plt.yticks(ticks=np.arange(heatmap_data.index.size), labels=heatmap_data.index)
 plt.tight_layout()
 plt.show()
 ```
-![alt text](tests\Imagens\image-6.png)
+![alt text](./Imagens/image-6.png)
 
 Estado que mais teve maior variação foi Pernambuco com 3.30 Fabricação de outros equipamentos de transporte, exceto veículos automotores.

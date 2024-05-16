@@ -21,7 +21,7 @@ A API é fornecida pelo Instituto Brasileiro de Geografia e Estatística (IBGE) 
 
 Informações sobre o sidra: https://sidra.ibge.gov.br/ajuda
 ## 3. Tabela Estatística
-A escolha da tabela foi a Pesquisa Industrial Mensal - Produção Física (PIMPF), ela produz indicadores de curto prazo relativos ao comportamento do produto real da indústria, tendo como unidade de investigação a empresa formalmente constituída cuja principal fonte de receita seja a atividade industrial.
+A escolha da tabela foi a Pesquisa Industrial Mensal - Produção Física (PIMPF), ela produz indicadores de curto prazo relativos ao comportamento do produto real da indústria, tendo como unidade de investigação a empresa formalmente constituída cuja principal fonte de receita seja a atividade industrial. A Pesquisa não apresenta dados de todos os Estados do Brasil.
 
 Link da tabela: https://sidra.ibge.gov.br/tabela/8888
 
@@ -145,13 +145,15 @@ for bar in bars:
     plt.text(bar.get_x() + bar.get_width()/2, yval, yval, ha='center', va='bottom')
 
 # Mostrar o gráfico
-plt.xticks(rotation=45)  # Rotaciona os rótulos do eixo x para melhorar a legibilidade
+plt.xticks(rotation=90)  # Rotaciona os rótulos do eixo x para melhorar a legibilidade
 plt.tight_layout()  # Ajusta o layout para evitar sobreposição de elementos
 plt.show()
 ```
 ![alt text](./Imagens/image-4.png)
 
-Estado do Pará, seguido de Maranhão e Rio de Janeiro foram os estados com maior crescimento industrial com relação ao mês anterior.
+Estado do Pará, seguido de Mata Grosso e Rio de Janeiro foram os estados com maior crescimento industrial com relação ao mês anterior.
+Em relação a fevereiro, março apresentou o maior retrocesso na Amazônia e no Paraná , com -13,9 e -13,0, respectivamente.
+Outrossim, Maranhão, Mato Grosso do Sul e Rio Grande do Norte apresentaram resultados sem alteração na comparação ao mês anterior
 
 ## 7. Gerando gráficos para análises - Variação Anual Acumulada
 
@@ -217,17 +219,10 @@ plt.title('Mapa de Calor - Variação Acumulada em 12 meses por CNAE e UF')
 # Ajustando os ticks
 plt.xticks(ticks=np.arange(heatmap_data.columns.size), labels=heatmap_data.columns, rotation=90)
 plt.yticks(ticks=np.arange(heatmap_data.index.size), labels=heatmap_data.index)
-
-# Adicionando anotações (valores) nas células
-# for i in range(heatmap_data.shape[0]):
-#     for j in range(heatmap_data.shape[1]):
-#         value = heatmap_data.iloc[i, j]
-#         if not np.isnan(value):
-#             plt.text(j, i, f'{value:.2f}', ha='center', va='center', color='white')
-
 plt.tight_layout()
 plt.show()
 ```
 ![alt text](./Imagens/image-6.png)
 
-Estado que mais teve maior variação foi Pernambuco com 3.30 Fabricação de outros equipamentos de transporte, exceto veículos automotores.
+O estado de Pernambuco foi o destaque dentro dos setores, apresentando maior variação na CNAE "3.30 Fabricação de outros equipamentos de transporte, exceto veículos automotores".
+Entretanto, no Pará, constata-se que a CNAE "3.17 Fabricação de celulosa, papel e produtos de papel" é a menor variação acumulada nos últimos 12 meses.

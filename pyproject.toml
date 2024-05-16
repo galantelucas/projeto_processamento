@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "projeto-processamento"
+version = "0.1.0"
+description = ""
+authors = ["Lucas <lucasgante@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12.1"
+requests = "^2.31.0"
+pandas = "^2.2.2"
+openpyxl = "^3.1.2"
+matplotlib = "^3.9.0"
+numpy = "^1.26.4"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
